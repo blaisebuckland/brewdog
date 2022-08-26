@@ -1,16 +1,15 @@
 import React from "react";
 import styles from "./CardList.module.scss";
 
-import beers from "../../data/beerData";
+import Card from "../Card";
 
-const CardList = () => {
-
+const CardList = (props) => {
+    const {beers} = props;
 
     return (
-        <>
-         <div>CardList</div>
-        </>
-       
+        <section 
+            className={styles.cardContainer}>{beers.map((beer) => <Card beer={beer} key={beer.id} />)} 
+        </section>
     )
 }
 

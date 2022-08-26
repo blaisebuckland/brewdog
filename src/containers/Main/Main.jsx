@@ -1,20 +1,13 @@
 import React from 'react'
 import styles from "./Main.module.scss"
 
-import beers from '../../data/beerData'
+import CardList from "../../components/CardList"
 
-import Card from '../../components/Card'
-
-const Main = () => {
-  console.log(beers);
+const Main = (props) => {
+  const { beers } = props;
+  
   return (
-    <>
-    <section className={styles.cardContainer} >
-            {beers.map((beer) => {
-                return <Card beer={beer} />
-            })}
-         </section>
-    </>
+      <CardList beers={beers} />
   )
 }
 
