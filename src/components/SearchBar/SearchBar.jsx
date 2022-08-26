@@ -2,8 +2,9 @@ import React from 'react'
 import styles from "./SearchBar.module.scss"
 
 const SearchBar = () => {
+  const placeholderText = "Search..."
   return (
-    <div>SearchBar</div>
+    <input type="text" placeholder={placeholderText}/>
   )
 }
 
