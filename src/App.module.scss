@@ -1,4 +1,6 @@
+@import "./variables.scss";
+
 main {
   display: flex;
-  
+  background-color: $color-background;
 }

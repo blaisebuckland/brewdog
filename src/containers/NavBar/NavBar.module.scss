@@ -1,6 +1,27 @@
+@import "../../variables.scss";
+
 .navContainer {
-    border: solid 2px black;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    border: solid 8px $color-primary;
+    border-radius: 3px;
+    background-color: $color-secondary;
     width: 200px;
-    padding: 20px 10px;
+    height: 350px;
+    padding: 40px 10px;
     margin: 20px;
+    box-shadow: 8px -8px $color-tertiary;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resetBtn {
+    background-color: $color-primary;
+    border: 2px solid $color-secondary;
+    border-radius: 5px;
+    height: 40px;
+    width: 90px;
 }

@@ -1,0 +1,11 @@
+@import "../../variables.scss";
+
+.searchBar {
+    background-color: $color-primary;
+    border: 2px solid $color-secondary;
+    border-radius: 5px;
+    height: 25px;
+    width: 130px;
+    padding-left: 2px;
+    margin: 0px 10px;
+}

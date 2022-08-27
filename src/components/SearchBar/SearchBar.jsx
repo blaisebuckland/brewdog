@@ -5,7 +5,7 @@ const SearchBar = (props) => {
   const { updateSearchTerm } = props;
   const placeholderText = "Search..."
   return (
-    <input type="text" placeholder={placeholderText} onChange={event => updateSearchTerm(event.target.value)}/>
+    <input className={styles.searchBar} type="text" placeholder={placeholderText} onChange={event => updateSearchTerm(event.target.value)}/>
   )
 }
 
