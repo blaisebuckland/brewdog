@@ -13,76 +13,33 @@ const App = () => {
   const [ classicFilterOn, setClassicFilterOn ] = useState(false);
   const [ acidicFilterOn, setAcidicFilterOn ] = useState(false);
 
-//   const API_URL = "https://api.punkapi.com/v2/beers";
-
-// const getBeers = () => {
-//   return fetch (API_URL)
-//       .then((res) => res.json())
-//       .then((jsonResponse) => {
-//           setBeers(jsonResponse);
-//       })
-// }
   useEffect( async () => {
     const beers = await getBeers("")
     setBeers(beers)
   }, [])
 
-  // const getSearchedBeers = (searchTerm) => {
-  //   return fetch (API_URL)
-  //       .then((res) => res.json())
-  //       .then((jsonResponse) => {
-  //         const searchedBeers = jsonResponse.filter((beer) => beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
-  //           setBeers(searchedBeers);
-  //       })
-  // }
-
-  // const getAbvBeers = () => {
-  //   return fetch (`${API_URL}/?abv_gt=6`)
-  //       .then((res) => res.json())
-  //       .then((jsonResponse) => {
-  //           setBeers(jsonResponse);
-  //       })
-  // }
-
-  // const getClassicBeers = () => {
-  //   return fetch (`${API_URL}/?brewed_before=012010`)
-  //       .then((res) => res.json())
-  //       .then((jsonResponse) => {
-  //           setBeers(jsonResponse);
-  //       })
-  // }
-
-  // const getAcidicBeers = () => {
-  //   return fetch (API_URL)
-  //       .then((res) => res.json())
-  //       .then((jsonResponse) => {
-  //         const acidicBeers= jsonResponse.filter((beer) => beer.ph < 4)
-  //           setBeers(acidicBeers);
-  //       })
-  // }
-
-  const updateSearchTerm = (searchTerm) => {
+  const updateSearchTerm = async (searchTerm) => {
     setSearchTerm(searchTerm);
-    const beers = getSearchedBeers(searchTerm)
+    const beers = await getSearchedBeers(searchTerm)
     setBeers(beers)
     ;
   }
 
-  const updateAbvFilter = (abvFilterOn) => {
-    setAbvFilterOn();
-    const beers = getAbvBeers(abvFilterOn);
+  const updateAbvFilter = async (abvFilterOn) => {
+    setAbvFilterOn(abvFilterOn);
+    const beers = await getAbvBeers();
     setBeers(beers)
   }
 
-  const updateClassicFilter = (classicFilterOn) => {
+  const updateClassicFilter = async (classicFilterOn) => {
     setClassicFilterOn(classicFilterOn);
-    const beers =  getClassicBeers();
+    const beers =  await getClassicBeers();
     setBeers(beers)
   }
 
-  const updateAcidicFilter = (acidicFilterOn) => {
+  const updateAcidicFilter = async (acidicFilterOn) => {
     setAcidicFilterOn(acidicFilterOn);
-    const beers = getAcidicBeers();
+    const beers = await getAcidicBeers();
     setBeers(beers)
   }
 
