@@ -10,16 +10,13 @@ const Filters = (props) => {
 
   
   return (
-    // <div className={styles.filterContainer}>
-    //   {createFilters}
-    // </div>
     <>
       <div className={styles.filterItem} >
         <label for="abv">High ABV </label>
         <input type="radio" name="filters" id="abv" onClick={() => updateAbvFilter(!abvFilterOn)} />
       </div>
       <div className={styles.filterItem} >
-        <label for="classic">Clasic range </label>
+        <label for="classic">Classic range </label>
         <input type="radio" name="filters" id="classic" onClick={() => updateClassicFilter(!classicFilterOn)} />
       </div>
       <div className={styles.filterItem} >
