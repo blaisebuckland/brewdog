@@ -5,14 +5,17 @@ import SearchBar from "../../components/SearchBar"
 import Filters from "../../components/Filters"
 
 const NavBar = (props) => {
-  const { updateSearchTerm, setAbvFilterOn, setClassicFilterOn, setAcidicFilterOn, abvFilterOn, classicFilterOn, acidicFilterOn } = props;
+  const { updateSearchTerm, updateAbvFilter, abvFilterOn, updateClassicFilter, classicFilterOn, updateAcidicFilter, acidicFilterOn } = props;
+  
+  const resetFilters = () => window.location.reload();
+
   return (
     <>
     <section className={styles.navContainer}>
       <SearchBar updateSearchTerm={updateSearchTerm} />
-      <Filters setAbvFilterOn={setAbvFilterOn} 
-      setClassicFilterOn={setClassicFilterOn} setAcidicFilterOn={setAcidicFilterOn} 
-      abvFilterOn={abvFilterOn} classicFilterOn={classicFilterOn} acidicFilterOn={acidicFilterOn}/>
+      <Filters updateAbvFilter={updateAbvFilter} abvFilterOn={abvFilterOn} updateClassicFilter={updateClassicFilter} 
+      classicFilterOn={classicFilterOn} updateAcidicFilter={updateAcidicFilter} acidicFilterOn={acidicFilterOn}/>
+      <button className={styles.resetBtn} onClick={() => {resetFilters()}} >Reset filters</button>
     </section>
     </>
   )

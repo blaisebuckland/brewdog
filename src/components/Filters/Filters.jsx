@@ -6,7 +6,7 @@ import styles from "./Filters.module.scss"
 // one filter at a time, make so only one can be checked
 
 const Filters = (props) => {
-  const { setAbvFilterOn, setClassicFilterOn, setAcidicFilterOn, abvFilterOn, classicFilterOn, acidicFilterOn } = props;
+  const { updateAbvFilter, abvFilterOn, updateClassicFilter, classicFilterOn, updateAcidicFilter, acidicFilterOn } = props;
 
   
   return (
@@ -15,16 +15,16 @@ const Filters = (props) => {
     // </div>
     <>
       <div className={styles.filterItem} >
-        <label for="abv">High ABV (> 6%)</label>
-        <input type="checkbox" id="abv" onClick={() => {setAbvFilterOn(!abvFilterOn)}} />
+        <label for="abv">High ABV </label>
+        <input type="radio" name="filters" id="abv" onClick={() => updateAbvFilter(!abvFilterOn)} />
       </div>
       <div className={styles.filterItem} >
-        <label for="classic">Clasic range</label>
-        <input type="checkbox" id="classic" onClick={() => {setClassicFilterOn(!classicFilterOn)}} />
+        <label for="classic">Clasic range </label>
+        <input type="radio" name="filters" id="classic" onClick={() => updateClassicFilter(!classicFilterOn)} />
       </div>
       <div className={styles.filterItem} >
-        <label for="acidic">Acidic (ph below 4)</label>
-        <input type="checkbox" id="acidic" onClick={() => {setAcidicFilterOn(!acidicFilterOn)}} />
+        <label for="acidic">Acidic </label>
+        <input type="radio" name="filters" id="acidic" onClick={() => updateAcidicFilter(!acidicFilterOn)} />
       </div>
     </>
   )
