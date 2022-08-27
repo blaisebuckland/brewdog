@@ -3,7 +3,7 @@ import './App.module.scss';
 
 import Main from "./containers/Main";
 import NavBar from "./containers/NavBar";
-// import getBeers from './services/beers.service';
+import { getBeers, getSearchedBeers, getAbvBeers, getClassicBeers, getAcidicBeers } from './services/beers.service';
 
 const App = () => {
 
@@ -13,89 +13,77 @@ const App = () => {
   const [ classicFilterOn, setClassicFilterOn ] = useState(false);
   const [ acidicFilterOn, setAcidicFilterOn ] = useState(false);
 
-  let API_URL = "https://api.punkapi.com/v2/beers";
+//   const API_URL = "https://api.punkapi.com/v2/beers";
 
-//   const getBeers = (searchTerm, abvFilterOn, classicFilterOn, acidicFilterOn) => {
-    
-//     return fetch (API_URL)
-//         .then((res) => res.json())
-//         .then((jsonResponse) => {
-//             const searchedBeers = jsonResponse.filter((beer) => beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
-            
-//             const filteredBeers = searchedBeers.map((beer) => {
-              
-//               if (abvFilterOn && beer.abv < 6 ) {
-//                 return beer;
-//               } else {
-//                 return beer;
-//               }
-//             })
-//             setBeers(filteredBeers);
-//         })
+// const getBeers = () => {
+//   return fetch (API_URL)
+//       .then((res) => res.json())
+//       .then((jsonResponse) => {
+//           setBeers(jsonResponse);
+//       })
 // }
-const getBeers = () => {
-  return fetch (API_URL)
-      .then((res) => res.json())
-      .then((jsonResponse) => {
-          setBeers(jsonResponse);
-      })
-}
-  useEffect(() => {
-    getBeers("")
+  useEffect( async () => {
+    const beers = await getBeers("")
+    setBeers(beers)
   }, [])
 
-  const getSearchedBeers = (searchTerm) => {
-    return fetch (API_URL)
-        .then((res) => res.json())
-        .then((jsonResponse) => {
-          const searchedBeers = jsonResponse.filter((beer) => beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
-            setBeers(searchedBeers);
-        })
-  }
+  // const getSearchedBeers = (searchTerm) => {
+  //   return fetch (API_URL)
+  //       .then((res) => res.json())
+  //       .then((jsonResponse) => {
+  //         const searchedBeers = jsonResponse.filter((beer) => beer.name.toLowerCase().includes(searchTerm.toLowerCase()))
+  //           setBeers(searchedBeers);
+  //       })
+  // }
 
-  const getAbvBeers = () => {
-    return fetch (`${API_URL}/?abv_gt=6`)
-        .then((res) => res.json())
-        .then((jsonResponse) => {
-            setBeers(jsonResponse);
-        })
-  }
+  // const getAbvBeers = () => {
+  //   return fetch (`${API_URL}/?abv_gt=6`)
+  //       .then((res) => res.json())
+  //       .then((jsonResponse) => {
+  //           setBeers(jsonResponse);
+  //       })
+  // }
 
-  const getClassicBeers = () => {
-    return fetch (`${API_URL}/?brewed_before=012010`)
-        .then((res) => res.json())
-        .then((jsonResponse) => {
-            setBeers(jsonResponse);
-        })
-  }
+  // const getClassicBeers = () => {
+  //   return fetch (`${API_URL}/?brewed_before=012010`)
+  //       .then((res) => res.json())
+  //       .then((jsonResponse) => {
+  //           setBeers(jsonResponse);
+  //       })
+  // }
 
-  const getAcidicBeers = () => {
-    return fetch (API_URL)
-        .then((res) => res.json())
-        .then((jsonResponse) => {
-          const acidicBeers= jsonResponse.filter((beer) => beer.ph < 4)
-            setBeers(acidicBeers);
-        })
-  }
+  // const getAcidicBeers = () => {
+  //   return fetch (API_URL)
+  //       .then((res) => res.json())
+  //       .then((jsonResponse) => {
+  //         const acidicBeers= jsonResponse.filter((beer) => beer.ph < 4)
+  //           setBeers(acidicBeers);
+  //       })
+  // }
 
   const updateSearchTerm = (searchTerm) => {
     setSearchTerm(searchTerm);
-    getSearchedBeers(searchTerm);
+    const beers = getSearchedBeers(searchTerm)
+    setBeers(beers)
+    ;
   }
 
   const updateAbvFilter = (abvFilterOn) => {
     setAbvFilterOn();
-    getAbvBeers(abvFilterOn);
+    const beers = getAbvBeers(abvFilterOn);
+    setBeers(beers)
   }
 
   const updateClassicFilter = (classicFilterOn) => {
     setClassicFilterOn(classicFilterOn);
-    getClassicBeers();
+    const beers =  getClassicBeers();
+    setBeers(beers)
   }
 
   const updateAcidicFilter = (acidicFilterOn) => {
     setAcidicFilterOn(acidicFilterOn);
-    getAcidicBeers();
+    const beers = getAcidicBeers();
+    setBeers(beers)
   }
 
 
