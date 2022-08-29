@@ -2,5 +2,8 @@
 
 main {
   display: flex;
-  background-color: $color-background;
+  
+  @media screen and (max-width: 480px){
+    flex-direction: column;;
+}
 }

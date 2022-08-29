@@ -16,6 +16,11 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (max-width: 480px){
+        position: relative;
+        align-self: center;
+    }
 }
 
 .resetBtn {
