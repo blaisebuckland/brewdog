@@ -13,7 +13,6 @@ const Card = (props) => {
       <p>"{tagline}"</p>
       <br />
       <ul>
-        {/* <li>{tagline}</li> */}
         <li>ABV: {abv}</li>
         <li>First brewed: {first_brewed}</li>
       </ul>

@@ -1,13 +1,12 @@
 @import "../../variables.scss";
 
 .card {
-    border: solid 8px $color-secondary;
+    border: $border;
     border-radius: 3px;
-    box-shadow: 8px -8px $color-tertiary;
+    box-shadow: $box-shadow;
     width: 320px;
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
     align-items: center;
     padding: 20px 10px;
     margin: 20px;
