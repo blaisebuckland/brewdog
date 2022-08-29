@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+# Brewdog API App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React App which pulls data from the Punk API (https://punkapi.com/). Beers are displayed on cards and can be filtered using a search box or by selecting a filter.
 
-## Available Scripts
+## Technologies
 
-In the project directory, you can run:
+- React
+- API integration
+- JavaScript
+- Enzyme testing
+- HTML
+- SCSS
+- Git & GitHub
 
-### `npm start`
+## Skills
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Fetching and manipulating data from an API
+- Creating an app in React
+- Unit testing with Jest
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Design
 
-### `npm test`
+- Specification: <img src="https://github.com/blaisebuckland/brewdog/tree/main/src/assets/specification-image.png" alt="specification-image" width=300>
+- Colour palette based on rhubarb and custard sweets
+- Responsive across screen sizes
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Demo
 
-### `npm run build`
+<img src="https://github.com/blaisebuckland/brewdog/tree/main/src/assets/desktop-view.gif" alt="desktop-view" width=300>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<img src="https://github.com/blaisebuckland/brewdog/tree/main/src/assets/mobile-view.gif" alt="mobile-view" width=300>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Functionality
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Initially, all beers are rendered. The user can then search by name or add one of the three filters (ABV, classic range and acidic beers).
+- Only one filter can be applied at a time so a reset button on the navbar allows filters to be removed.
 
-### `npm run eject`
+## Further work
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- I would like to enable multiple filters to be applied at once and the use of a search term with filters.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Links
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [GitHub repository](https://github.com/blaisebuckland/brewdog)
+- [The app](https://blaisebuckland.github.io/brewdog/)
