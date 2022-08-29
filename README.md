@@ -20,15 +20,15 @@ This is a React App which pulls data from the Punk API (https://punkapi.com/). B
 
 ## Design
 
-- Specification: <img src="https://github.com/blaisebuckland/brewdog/tree/main/src/assets/specification-image.png" alt="specification-image" width=300>
+- Specification: <img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/specification-image.png" alt="specification-image" width=300>
 - Colour palette based on rhubarb and custard sweets
 - Responsive across screen sizes
 
 ## Demo
 
-<img src="https://github.com/blaisebuckland/brewdog/tree/main/src/assets/desktop-view.gif" alt="desktop-view" width=300>
+<img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/desktop-view.gif" alt="desktop-view" width=300>
 
-<img src="https://github.com/blaisebuckland/brewdog/tree/main/src/assets/mobile-view.gif" alt="mobile-view" width=300>
+<img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/mobile-view.gif" alt="mobile-view" width=300>
 
 ## Functionality
 
