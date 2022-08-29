@@ -1,6 +1,6 @@
 # Brewdog API App
 
-This is a React App which pulls data from the Punk API (https://punkapi.com/). Beers are displayed on cards and can be filtered using a search box or by selecting a filter.
+This is a React App which pulls data from the [Punk API](https://punkapi.com/). Beers are displayed on cards and can be filtered using a search box or by selecting a filter.
 
 ## Technologies
 
