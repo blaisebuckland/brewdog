@@ -1,13 +1,13 @@
 # Brewdog API App
 
-This is a React App which pulls data from the [Punk API](https://punkapi.com/). Beers are displayed on cards and can be filtered using a search box or by selecting a filter.
+This is a React app which pulls data from the [Punk API](https://punkapi.com/). Beers are displayed on cards and can be filtered using a search box or by selecting a filter. The aim of the project was to develop my skills in React, working with APIs and unit testing.
 
 ## Technologies
 
 - React
 - API integration
 - JavaScript
-- Enzyme testing
+- Enzyme unit testing
 - HTML
 - SCSS
 - Git & GitHub
@@ -16,17 +16,20 @@ This is a React App which pulls data from the [Punk API](https://punkapi.com/). 
 
 - Fetching and manipulating data from an API
 - Creating an app in React
-- Unit testing with Jest
+- Unit testing with Enzyme
 
 ## Design
 
-- Specification: <img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/specification-image.png" alt="specification-image" width=300>
+- Specification:
+
+  <img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/specification-image.png" alt="specification-image" width=650>
+
 - Colour palette based on rhubarb and custard sweets
 - Responsive across screen sizes
 
 ## Demo
 
-<img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/desktop-view.gif" alt="desktop-view" width=300>
+<img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/desktop-view.gif" alt="desktop-view" width=650>
 
 <img src="https://github.com/blaisebuckland/brewdog/blob/main/src/assets/mobile-view.gif" alt="mobile-view" width=300>
 
@@ -38,6 +41,8 @@ This is a React App which pulls data from the [Punk API](https://punkapi.com/). 
 ## Further work
 
 - I would like to enable multiple filters to be applied at once and the use of a search term with filters.
+- I would like to streamline my fetches from the API.
+- I plan to use what I have learnt in this project to create another similar project, in which I will implement these changes and add additional functionality.
 
 ## Links
 
