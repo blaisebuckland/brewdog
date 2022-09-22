@@ -2,6 +2,7 @@
 
 main {
   display: flex;
+  margin: 50px;
   
   @media screen and (max-width: 480px){
     flex-direction: column;;
