@@ -3,6 +3,7 @@
 main {
   display: flex;
   margin: 50px;
+  justify-content: center;
   
   @media screen and (max-width: 480px){
     flex-direction: column;;
